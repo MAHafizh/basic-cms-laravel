@@ -1,8 +1,9 @@
 ### How To Start
-- firstly, run "php artisan migrate"
-- run "php artisan db:seed"
-- run "php artisan serve"
-- run "npm run dev"
+- firstly, run "php artisan migrate",
+- run "php artisan db:seed",
+- run "php artisan serve",
+- run "npm install",
+- run "npm run dev".
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
