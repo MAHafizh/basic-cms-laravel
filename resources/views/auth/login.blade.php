@@ -28,23 +28,23 @@
                     <div class="flex items-center justify-between">
                         <div class="flex items-start">
                             <div class="flex items-center h-5">
-                                <input id="remember" aria-describedby="remember" type="checkbox"
-                                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                                    required="">
+                                <input id="remember" name="remember" aria-describedby="remember" type="checkbox"
+                                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800">
                             </div>
                             <div class="ml-3 text-sm">
-                                <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
+                                <label for="remember" class="text-gray-500">Remember me</label>
                             </div>
                         </div>
-                        <a href="#"
+                        <a href="{{ route('password.request') }}"
                             class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot
                             password?</a>
                     </div>
                     <button type="submit"
                         class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign
-                        in</button>
+                        in
+                    </button>
                     <p class="text-sm font-light text-gray-500">
-                        Don’t have an account yet? <a href="#"
+                        Don’t have an account yet? <a href="/register"
                             class="font-medium text-blue-600 hover:underline">Sign up</a>
                     </p>
                 </form>

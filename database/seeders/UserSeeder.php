@@ -17,12 +17,10 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Test Admin',
-            'email' => 'test_admin@example.com',
+            'email' => 'testadmin@example.com',
             'username' => 'superadmin',
-            'email_verified_at' => now(),
             'password' => Hash::make('password'),
-            'remember_token' => Str::random(10),
         ]);
-        User::factory(20)->create();
+        User::factory(5)->create();
     }
 }

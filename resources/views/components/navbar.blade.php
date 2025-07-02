@@ -43,19 +43,20 @@
                             @if (session('user'))
                                 <a href="/user/dashboard" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                     tabindex="-1" id="user-menu-item-0">{{ session('user.name') }}</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                    tabindex="-1" id="user-menu-item-1">Settings</a>
+
+                                <form action="{{ route('logout') }}" method="POST"
+                                    class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                    id="user-menu-item-2">
+                                    @csrf
+                                    <button type="submit" class="w-full text-left">Sign out</button>
+                                </form>
                             @else
                                 <a href="/login" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                    tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                                    tabindex="-1" id="user-menu-item-0">Log In</a>
                             @endif
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                tabindex="-1" id="user-menu-item-1">Settings</a>
 
-                            <form action="{{ route('logout') }}" method="POST"
-                                class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                                id="user-menu-item-2">
-                                @csrf
-                                <button type="submit" class="w-full text-left">Sign out</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -109,16 +110,19 @@
                 @if (session('user'))
                     <a href="/user/dashboard"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">{{ session('user.name') }}</a>
+                    <a href=""
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit"
+                            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign
+                            out</button>
+                    </form>
                 @else
                     <a href="/user/dashboard"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Your
-                        Profile</a>
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Log
+                        In</a>
                 @endif
-                <a href=""
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a>
-                <a href="#"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign
-                    out</a>
             </div>
         </div>
     </div>
